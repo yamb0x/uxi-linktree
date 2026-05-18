@@ -14,7 +14,12 @@ Open `index.html` directly in a browser. No build step.
 
 ## QR code
 
-`qr-code.png` encodes `https://uxi-linktree.vercel.app`. If you change the production URL, regenerate it (any QR generator works, or visit `https://api.qrserver.com/v1/create-qr-code/?size=600x600&data=YOUR_URL`).
+Both files encode `https://uxi-linktree.vercel.app` with high error correction (~30% damage tolerance):
+
+- **`qr-code.svg`** — vector, scales to any size with no pixelation. Use for print (posters, business cards, signage).
+- **`qr-code.png`** — 1000×1000, use for screens, slides, or anywhere PNG is required.
+
+If the production URL changes, regenerate both via `https://api.qrserver.com/v1/create-qr-code/?data=YOUR_URL&ecc=H&margin=20` (add `&format=svg` for the vector version, `&size=1000x1000` for the PNG).
 
 ## Adding links
 
