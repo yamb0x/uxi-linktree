@@ -2,22 +2,92 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="UXI" />
-    <title>UXI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content="Yambo @ UXI 2026 — talk, workshop, and case studies." />
+    <meta name="theme-color" content="#070707" />
+    <title>Yambo @ UXI 2026</title>
     <link rel="icon" href="data:," />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main>
-      <h1>UXI</h1>
+    <main class="container">
+      <img class="logo" src="assets/yambo-studio-hero.png" alt="Yambo Studio" />
+      <div class="caption-mono">@ UXI &nbsp;&middot;&nbsp; 2026</div>
+      <hr class="dashed" />
 
-      <ul class="links">
-        <!--
-          Add links here, e.g.:
-          <li><a href="https://example.com" target="_blank" rel="noopener">Label</a></li>
-        -->
-      </ul>
+      <div class="links">
+
+        <div class="row">
+          <div class="row-head">
+            <div class="row-title">UXI Presentation</div>
+            <div class="row-icon" aria-hidden="true"></div>
+          </div>
+          <div class="row-body">
+            <div class="row-content">
+              <div class="talk-title">Connect The Dots</div>
+              <div class="talk-desc">Talk connecting the dots between man craft, research and AI.</div>
+              <a class="visit" href="https://www.dropbox.com/scl/fi/taxsg87y0sql3hpynncg2/UXI_presentation.pptx?rlkey=o49gs3om2zqh0r2vdha0q8hgn&amp;dl=0" target="_blank" rel="noopener">Open presentation &nbsp;&#x2197;</a>
+            </div>
+          </div>
+        </div>
+        <hr class="dashed" />
+
+        <div class="row">
+          <div class="row-head">
+            <div class="row-title">ComfyUI Workshop</div>
+            <div class="row-icon" aria-hidden="true"></div>
+          </div>
+          <div class="row-body">
+            <div class="row-content">
+              <div class="talk-title">4h Workshop</div>
+              <div class="talk-desc">Workflows + presentations + example files inside.</div>
+              <div class="talk-note">Use code <span class="code">WAITFORPLNTY</span> for 100% off</div>
+              <a class="visit" href="https://yamb0x.gumroad.com/l/bwjhy" target="_blank" rel="noopener">Get the workshop &nbsp;&#x2197;</a>
+            </div>
+          </div>
+        </div>
+        <hr class="dashed" />
+
+        <div class="row">
+          <div class="row-head">
+            <div class="row-title">Island Case Study</div>
+            <div class="row-icon" aria-hidden="true"></div>
+          </div>
+          <div class="row-body">
+            <div class="row-content">
+              <div class="talk-desc">Island booth at Gartner Symposium 2025 activation.</div>
+              <a class="visit" href="https://www.behance.net/gallery/238754605/Workspace-of-Art" target="_blank" rel="noopener">View on Behance &nbsp;&#x2197;</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <a class="plnty" href="https://plnty.app" target="_blank" rel="noopener">
+        <span class="plnty-name">plnty.app</span>
+        <span class="plnty-sep">~</span>
+        <span class="plnty-badge">early access</span>
+        <span class="plnty-arrow">&rarr;</span>
+      </a>
+
+      <nav class="socials" aria-label="Social links">
+        <a href="https://discord.com/invite/MEF2vWmyuA" target="_blank" rel="noopener">Discord</a>
+        <a href="https://www.yambo-studio.com/" target="_blank" rel="noopener">Website</a>
+        <a href="https://x.com/yamb0x" target="_blank" rel="noopener">X</a>
+        <a href="https://www.linkedin.com/in/yam-ben-adiva-a931a632/" target="_blank" rel="noopener">LinkedIn</a>
+      </nav>
     </main>
+
+    <script>
+      document.querySelectorAll('.row').forEach(function (row) {
+        row.addEventListener('click', function () { row.classList.toggle('open'); });
+      });
+      document.querySelectorAll('.visit, .socials a, .plnty').forEach(function (a) {
+        a.addEventListener('click', function (e) { e.stopPropagation(); });
+      });
+    </script>
   </body>
 </html>
