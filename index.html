@@ -27,9 +27,12 @@
           </div>
           <div class="row-body">
             <div class="row-content">
-              <div class="talk-title">Connect The Dots</div>
-              <div class="talk-desc">Talk connecting the dots between man craft, research and AI.</div>
-              <a class="visit" href="https://www.dropbox.com/scl/fi/taxsg87y0sql3hpynncg2/UXI_presentation.pptx?rlkey=o49gs3om2zqh0r2vdha0q8hgn&amp;dl=0" target="_blank" rel="noopener">Open presentation &nbsp;&#x2197;</a>
+              <div class="talk-title">Connect The Dots @ Yambo &middot; 20.05.2026</div>
+              <div class="talk-desc">Talk connecting the dots between man craft, research and AI &mdash; and the feedback loop that emerges when the three meet in the work.</div>
+              <div class="row-actions">
+                <a class="visit" href="https://www.dropbox.com/scl/fi/taxsg87y0sql3hpynncg2/UXI_presentation.pptx?rlkey=o49gs3om2zqh0r2vdha0q8hgn&amp;dl=0" target="_blank" rel="noopener">Open presentation &nbsp;&#x2197;</a>
+                <a class="visit" href="https://www.yambo-studio.com/artworks/feedback-loop" target="_blank" rel="noopener">View Feedback Loop &nbsp;&#x2197;</a>
+              </div>
             </div>
           </div>
         </div>
@@ -45,7 +48,7 @@
               <div class="talk-title">4h Workshop &middot; 2024</div>
               <div class="talk-desc">Workflows + presentations + example files inside.</div>
               <div class="talk-note">Use code <span class="code">WAITFORPLNTY</span> for 100% off</div>
-              <a class="visit" href="https://yamb0x.gumroad.com/l/bwjhy" target="_blank" rel="noopener">Get the workshop &nbsp;&#x2197;</a>
+              <a class="visit" href="https://yamb0x.gumroad.com/l/bwjhy" target="_blank" rel="noopener">Get the workshop for free &nbsp;&#x2197;</a>
             </div>
           </div>
         </div>
@@ -76,6 +79,10 @@
         <span class="plnty-arrow">&rarr;</span>
       </a>
 
+      <p class="plnty-desc">
+        Plnty, a place where you and your creative team can form new ideas, explore, create, iterate, and build with AI. It&rsquo;s a fresh and unique perspective on how we should blend AI into our creative processes. Join to receive free credits and experiment.
+      </p>
+
       <nav class="socials" aria-label="Social links">
         <a href="https://discord.com/invite/MEF2vWmyuA" target="_blank" rel="noopener">Join Yambo Discord</a>
         <a href="https://www.yambo-studio.com/" target="_blank" rel="noopener">Website</a>
@@ -85,8 +92,13 @@
     </main>
 
     <script>
-      document.querySelectorAll('.row').forEach(function (row) {
-        row.addEventListener('click', function () { row.classList.toggle('open'); });
+      var rows = document.querySelectorAll('.row');
+      rows.forEach(function (row) {
+        row.addEventListener('click', function () {
+          var wasOpen = row.classList.contains('open');
+          rows.forEach(function (r) { r.classList.remove('open'); });
+          if (!wasOpen) row.classList.add('open');
+        });
       });
       document.querySelectorAll('.visit, .socials a, .plnty').forEach(function (a) {
         a.addEventListener('click', function (e) { e.stopPropagation(); });
