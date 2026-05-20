@@ -178,13 +178,14 @@ body {
 
 .row-actions {
   display: flex;
-  flex-wrap: wrap;
-  gap: 18px;
+  flex-wrap: nowrap;
+  gap: 16px;
   margin-top: 12px;
 }
 
 .row-actions .visit {
   margin-top: 0;
+  white-space: nowrap;
 }
 
 /* plnty — clean white CTA */
